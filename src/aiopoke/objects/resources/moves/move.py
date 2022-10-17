@@ -84,9 +84,9 @@ class Move(NamedResource):
     ) -> None:
         super().__init__(id=id, name=name)
         self.accuracy = accuracy
-        self.contest_combos = ContestComboSets(**contest_combos)
-        self.contest_effect = Url(**contest_effect)
-        self.contest_type = MinimalResource(**contest_type)
+        #self.contest_combos = ContestComboSets(**contest_combos)
+        #self.contest_effect = Url(**contest_effect)
+        #self.contest_type = MinimalResource(**contest_type)
         self.damage_class = MinimalResource(**damage_class)
         self.effect_chance = effect_chance
         self.effect_entries = [
@@ -115,7 +115,7 @@ class Move(NamedResource):
         self.stat_changes = [
             MoveStatChange(**stat_change) for stat_change in stat_changes
         ]
-        self.super_contest_effect = Url(**super_contest_effect)
+        #self.super_contest_effect = Url(**super_contest_effect)
         self.target = MinimalResource(**target)
         self.type = MinimalResource(**type)
 
@@ -258,5 +258,5 @@ class PastMoveStatValues(Resource):
         self.effect_entries = [
             VerboseEffect(**effect_entry) for effect_entry in effect_entries
         ]
-        self.type = MinimalResource(**type)
+        #self.type = MinimalResource(**type)
         self.version_group = MinimalResource(**version_group)
